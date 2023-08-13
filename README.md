@@ -31,7 +31,7 @@ the pychorus library had many functions which are used to extract the chorus par
 <div>
 4- Librosa library to extract the audio features from the best chorus found for each song.<br><br>
 the librosa library had many functions which are used to extract numerical features from an audio file(chorus audio).<br>  
-- we used only 11 major features (choroma_stft,)
+- we used only 11 major features (choroma_stft,chroma_cqt,chroma_cens,spectral_bandwidth,spectral_centroid,spectral_contrast,spectral_rolloff)
 </div>
 # Data Exploratory Analysis
 this phase was very challenging as we extract more than 500 features for each song to be ensured that we will inform enough features to the model.<br>
