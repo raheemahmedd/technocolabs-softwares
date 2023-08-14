@@ -67,7 +67,6 @@ secondly: Checking and handling the discovered outliers.<br><br>
 this phase is so important as it has a huge effect on the modeling phase.<br>
 we apply many preprocessing techniques :
 - transformer
-- bounds
 - scaler
 - PCA
   <br><br>
@@ -85,7 +84,7 @@ so we decided to use Randomized and Grid search for both models and then choose 
 *Note it was obvious that the random forest model had higher performance than the logistic one, as the random forest's maximum accuracy equals 84% while the logistic's maximum accuracy equals 71%.<br><br>
 *Note we cared about the f1-score metric cause our data was imbalanced data.<br><br>
 
-<b> Finally </b> we used the Random forest model as it had the highest performance. <b>(+80% accuracy & 60% f1-score)</b>.<br><br>
+<b> Finally </b> we used the Random forest model as it had the highest performance. <b>(+84% accuracy & 60% f1-score)</b>.<br><br>
 <img src="https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/f3f90a87-43fa-4db7-9ddb-fb44cc7b80ee">
 # Deployment
 #### *Second task as a team
