@@ -11,6 +11,8 @@ contact: https://github.com/Nour-Ibrahim-1290
 2- song prediction through Spotify API link .<br>
 3- song prediction through uploaded song file. <br> 
 4- song prediction through the youtube link.
+
+##### Check it now 🔥: https.com 
 # Data collection
 Our data was scrapped by us using:<br><br>
 1- Billboard API to fetch the names of hot-100 songs for the last 5 years and the unpopular songs released in the same years for the same artists, so we got 507 popular and 1260 unpopular songs with a total of 1767 songs.<br>
@@ -93,13 +95,24 @@ so we decided to use Randomized and Grid search for both models and then choose 
 
 
 ### Front-End 
-the app includes only 2 web pages:<br>
-Home page: which allows users to interact with the app whether by:<br>
+the app includes a few web pages:<br>
+- Home page  <br>  <br>
+<img src='https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/c4a4b94c-ff07-41e7-b579-ed7ebc08f3f3'><br>
+- Inputs page <br>   
+<img src='https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/fee9fcff-1f2a-4eff-bd82-36c61926cab4'><br>
+<div>
+which allows users to interact with the app through:<br>
+
 1- input a song's link(Spotify/youtube).<br>
 2- Click the recently released songs button.<br>
 3- upload a personal song file.<br><br>
-Result page: which shows song predictions.<br>
-Developers: George saied - Rawan alaa- Nourhan Elashmawy.
+Result page:<br><br>
+<img src='https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/78f65bcb-226a-44c4-a3e9-0100570b46c9'><br>
+<img src='https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/d732ca6d-0607-4046-9692-6127b72d7e77'><br>
+which shows song predictions.<br>
+ - Developers: George saied - Rawan alaa- Nourhan Elashmawy.
+</div>
+
 ### Back-End
 The framework used is the Flask framework, as we implemented the 4 main functionalities with it.<br>
 - predict_youtube(): this function aims to predict the popularity of a song by taking a youtube link from the user and it returns the model's prediction about the entered song link.<br><br>
