@@ -19,8 +19,8 @@
 
 
 #FROM python:3.10
-FROM python:3.11.4-slim
-
+#FROM python:3.11.4-slim
+FROM python:3
 RUN apt-get update 
 
 RUN apt-get install python3-pip
