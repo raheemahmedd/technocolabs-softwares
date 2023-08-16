@@ -12,7 +12,7 @@ contact: https://github.com/Nour-Ibrahim-1290
 3- song prediction through uploaded song file. <br> 
 4- song prediction through the youtube link.
 
-##### Check it now 🔥: https.com 
+##### Check it now 🔥: https://hotornot.onrender.com/
 # Data collection
 Our data was scrapped by us using:<br><br>
 1- Billboard API to fetch the names of hot-100 songs for the last 5 years and the unpopular songs released in the same years for the same artists, so we got 507 popular and 1260 unpopular songs with a total of 1767 songs.<br>
