@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Songs Popularity Prediction</title>
+    <head>
+    <meta charset="utf-8">
+	    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Rubik">
+    <style>
+        body {
+            background-image: url("/static/background.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: 'Rubik', serif;
+        }
+        .title-box {
+            text-align: left;
+            color: #000000;
+            width: 100%;
+        }
+        button {
+            background-color: rgb(6, 32, 182);
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 15px;
+			font-family: Rubik, serif;
+            transition: background-color 0.4s, width 0.4s; 
+            width: 20%; 
+			text-align: center; margin-top: 30px;
+            margin: 0%;
+        }
+
+button:hover {
+    background-color: rgb(0, 95, 238);
+    width: 40%; /* Set the width on hover */
+}
+
+
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 10px; /* Add rounded corners to the search bar */
+            width: 38%;
+            font-size: 16px;
+        }
+        form {
+    width: 50%;
+    background-color: rgba(36, 100, 196, 0.51);
+    margin: 20px;
+    padding: 15px;
+    text-align: left;
+	border-radius: 20px
+}
+        h2 {
+            color: #ffffff;
+			margin:0px;
+			margin-bottom:10px;
+			margin-left:3px;
+			
+        }
+        #formFile {
+            border: 2px;
+            border-radius: 30px;
+            text-align: center;
+            padding: 9px;
+            font-size: 16px;
+            border-style: solid;
+            margin-bottom: 16px;
+            color: #054393;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div>
+<form action="/predict_youtube" method="post">
+    <h2>Song Prediction Through YouTube</h2>
+    <input type="text" name="input" placeholder="Enter YouTube URL"><br><br>
+    <button type="submit">Predict</button>
+</form>
+</div>
+<div>
+<form action="/predict_spotify" method="post">
+    <h2>Song Prediction Through Spotify</h2>
+    <input type="text" name="input" placeholder="Enter Spotify URL"><br><br>
+    <button type="submit">Predict</button>
+</form>
+</div>
+<div></div>
+<form action="/check_spotify_new_releases" method="post">
+    <h2>Check Spotify New Releases</h2>
+    <button type="submit">Check</button>
+</form>
+</div>
+
+<div></div>
+<form action="/upload_song" method="post" enctype="multipart/form-data">
+    <h2>Drop a Song File</h2>
+    <div class="mb-3">
+        <input class="form-control" type="file" id="formFile" name="audio_file" accept="audio/*"><br/>
+        <button type="submit">Upload</button>
+    </div>
+</form>
+</div>
+
+</body>
+</html>
