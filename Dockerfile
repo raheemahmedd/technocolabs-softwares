@@ -16,5 +16,5 @@ RUN apt-get update && apt-get install -y python3-pip
 # Install the application dependencies from requirements.txt
 RUN pip3 install.txt
 
- Define -# ther entry requirements point for the container
+
 CMD ["flask", "run", "--host=0.0.0.0"]
