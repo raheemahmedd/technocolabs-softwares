@@ -1,6 +1,6 @@
 # Use the official Python image as the base image
 #FROM python:3
-FROM python:3.8-slim-buster
+#FROM python:3.8-slim-buster
 
 
 # Update the package manager and install python3-pip
@@ -12,12 +12,18 @@ FROM python:3.8-slim-buster
 WORKDIR /app
 
 # Copy the application files into the working directory
-COPY . /app
+#COPY . /app
 
 # Install the application dependencies
 # fixed typo changed: "pip3" to "python3-pip"
 # The error message states that python3-pip is missing, so it needs to be installed.
-RUN python3 -m pip install -r requirements.txt
+#RUN python3 -m pip install -r requirements.txt
 
 # Define the entry point for the container
-CMD ["python", "app.py"]
+#CMD ["python", "app.py"]
+FROM python:3-alpine3.15
+WORKDIR /app
+COPY . /app
+RUN pip install -r requirements.txt
+EXPOSE 3000
+CMD python ./index.py
