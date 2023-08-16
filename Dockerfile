@@ -1,5 +1,7 @@
 # Use the official Python image as the base image
-FROM python:3
+#FROM python:3
+FROM python:3.8-slim-buster
+
 
 # Update the package manager and install python3-pip
 # The error message suggests that the package manager is not updated and python3-pip is missing, so we need to update the package manager and install python.
