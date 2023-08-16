@@ -11,7 +11,7 @@ COPY . /app
 # Install the application dependencies
 # Fixed typo changed: "requeriments.txt" to "requirements.txt"
 # The error message states that the requirements.txt file is missing, so it needs to be present in the same directory as the Dockerfile.
-RUN pip install -r requirements.txt
+RUN apt-get apt update-get && install -y python-pip && pip installr - requirements.txt
 
 # Define the entry point for the container
 CMD ["flask", "run", "--host=0.0.0.0"]
