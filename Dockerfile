@@ -11,7 +11,11 @@ COPY . /app
 # Install the application dependencies
 # Fixed typo changed: "requeriments.txt" to "requirements.txt"
 # The error message states that the requirements.txt file is missing, so it needs to be present in the same directory as the Dockerfile.
-RUN apt-get install python3-pip && pip install -r requirements.txt
+#RUN apt-get install python3-pip && pip install -r requirements.txt
+RUN apt-get update && apt-get install -y --allow-unauthenticated universe
+RUN pip3 install -r requirements.txt
+
+RUN apt-get install python3-pip
 
 
 # Define the entry point for the container
