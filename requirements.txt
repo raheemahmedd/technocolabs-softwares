@@ -12,4 +12,5 @@ yt_dlp
 spotipy
 spotipy.oauth2
 datetime
+python==3.9.13
 
