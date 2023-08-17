@@ -1,13 +1,14 @@
-FROM python:3.10
+# Use the official Python image as the base image
+FROM python:3.8
 
-RUN apt-get update 
-
-RUN apt-get install python3-pip
-
-COPY . /app
-
+# Set the working directory in the container
 WORKDIR /app
 
-RUN pip3 install -r requirements.txt
+# Copy the application files into the working directory
+COPY . /app
 
-CMD ["python3", "app.py"]
+# Install the application dependencies
+RUN pip install -r requirements.txt
+
+# Define the entry point for the container
+CMD ["flask", "run", "--host=0.0.0.0"]
