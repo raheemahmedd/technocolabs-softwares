@@ -12,5 +12,5 @@ yt_dlp
 spotipy
 
 datetime
-python==3.9.13
+
 
