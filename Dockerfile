@@ -9,7 +9,7 @@
     && apt-get install -y python3-pip
 
 # Create the working directory in the container
-WORKDIR /app
+#WORKDIR /app
 
 # Copy the application files into the working directory
 #COPY . /app
@@ -21,9 +21,22 @@ WORKDIR /app
 
 # Define the entry point for the container
 #CMD ["python", "app.py"]
-FROM python:3-alpine3.15
-WORKDIR /app
+#FROM python:3-alpine3.15
+#WORKDIR /app
+#COPY . /app
+#RUN pip install -r requirements.txt
+#EXPOSE 3000
+#CMD python ./index.py
+FROM python:3.10
+
+RUN apt-get update && apt-get install -y --allow-unauthenticated universe
+
+RUN apt-get install python3-pip
+
 COPY . /app
-RUN pip install -r requirements.txt
-EXPOSE 3000
-CMD python ./index.py
+
+WORKDIR /app
+
+RUN pip3 install -r requirements.txt
+
+CMD ["python3", "app.py"]
