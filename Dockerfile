@@ -1,18 +1,13 @@
+FROM python:3.10
 
-FROM python:3.9-slim
+RUN apt-get update && apt-get install -y --allow-unauthenticated universe
 
-# Working directory
+RUN apt-get install python3-pip
+
+COPY . /app
+
 WORKDIR /app
 
-# Copy requirements file and install dependencies
-COPY requirements.txt requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip3 install -r requirements.txt
 
-# Copy the rest of the project files
-COPY . .
-
-# Expose the server port
-EXPOSE 8080
-
-# Command to start the server
-CMD ["gunicorn", "-b", "0.0.0.0:8080", "app:app"]
+CMD ["python3", "app.py"]
