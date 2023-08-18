@@ -6,7 +6,7 @@ pandas
 librosa
 scipy
 pychorus
-pickle
+
 youtube_search
 yt_dlp
 spotipy
