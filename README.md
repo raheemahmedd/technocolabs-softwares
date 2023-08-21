@@ -14,6 +14,8 @@ contact: https://github.com/Nour-Ibrahim-1290
 
 ##### Check it now 🔥: https://hotornot.onrender.com/
 # Data collection
+<img src="https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/02e2afb9-5655-441c-a552-63fa71bf1571">
+
 Our data was scrapped by us using:<br><br>
 1- Billboard API to fetch the names of hot-100 songs for the last 5 years and the unpopular songs released in the same years for the same artists, so we got 507 popular and 1260 unpopular songs with a total of 1767 songs.<br>
 the final data extracted from Billboard API looks like 1767 rows x 3 columns(artist name, song name, song label).<br><br>
@@ -52,6 +54,7 @@ we used Functions to extract feature statistics from the chorus like (min,mean,m
 </div>
 
 # Data Exploratory Analysis
+<img src="https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/83e68c7d-3f95-45f3-ad30-203213e8e88f"><br>
 this phase was very challenging as we extracted more than 500 features(521) for each song to be ensured that we will inform enough features to the model.<br>
 <br>
 firstly: Made some general visualizations to discover what data looks like.<br><br>
@@ -66,6 +69,7 @@ secondly: Checking and handling the discovered outliers.<br><br>
 
 
 # Data preprocessing 
+<img src='https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/79d306a2-94cd-494b-a99d-04688db885b1'> <br>
 this phase is so important as it has a huge effect on the modeling phase.<br>
 we apply many preprocessing techniques :
 - transformer
@@ -79,7 +83,10 @@ we apply many preprocessing techniques :
 
 
 # Data Modeling
+<img src='https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/fbccc26e-0a18-4314-8f54-2e101014de88'>
+
 #### *First task as a team
+
 ###### Each member tried to construct a random forest and logistic model alone then we chose the higher performance between us.
 Our mentor asked us to work on 2 different models (Regularized logistic regression & Random forest),
 so we decided to use Randomized and Grid search for both models and then choose the highest-performance one.<br><br>
@@ -89,9 +96,12 @@ so we decided to use Randomized and Grid search for both models and then choose 
 <b> Finally </b> we used the Random forest model as it had the highest performance. <b>(+84% accuracy & 60% f1-score)</b>.<br><br>
 <img src="https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/f3f90a87-43fa-4db7-9ddb-fb44cc7b80ee">
 # Deployment
+<img src='(https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/16cd0fea-4f93-4f25-83ab-e0c3e0609a6c'>
+
 #### *Second task as a team
+
 ###### As mentioned above our app is web so we divided the team into front-end and Back-end developers.<br><br>
-<img src='https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/68cc0558-0e61-4c5e-ae43-5c9cbafd7403'>
+<img src='https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/4357ddc7-643e-450e-bfc0-7f7b27164ed2'>
 
 
 ### Front-End 
@@ -114,13 +124,18 @@ which shows song predictions.<br>
 </div>
 
 ### Back-End
-The framework used is the Flask framework, as we implemented the 4 main functionalities with it.<br>
-- predict_youtube(): this function aims to predict the popularity of a song by taking a youtube link from the user and it returns the model's prediction about the entered song link.<br><br>
- Developer: Sara Maged.
-- predict_spotify(): this function aims to predict the popularity of a song by taking a Spotify API link from the user and it returns the model's prediction about the entered song link.<br><br>
- Developer: Nour Mansy.  
-- check_spotify(): this function aims to fetch and predict the popularity of the recent 15 songs released from Spotify API.<br><br>
- Developer: Omar Ahmed. <br>
+<img src='https://github.com/raheemahmedd/technocolabs-softwares/assets/72644330/2899c44d-1623-48ad-a2ac-67ab038a2354'>
+The framework used is the Flask framework, as we implemented the 4 main functionalities with it.<br><br>
+<div>
+ <ul>
+<li> predict_youtube(): this function aims to predict the popularity of a song by taking a youtube link from the user and it returns the model's prediction about the entered song link.</li><br>
+ Developer: Sara Maged.<br><br>
+<li> predict_spotify(): this function aims to predict the popularity of a song by taking a Spotify API link from the user and it returns the model's prediction about the entered song link.</li><br>
+ Developer: Nour Mansy.  <br><br>
+<li> check_spotify(): this function aims to fetch and predict the popularity of the recent 15 songs released from Spotify API.<br>
+ </li>Developer: Omar Ahmed. <br><br>
+ </ul> 
+ </div>
  <diV>
  *Note this function will take a few seconds to inform the user of his prediction(as the model will work on 15 songs ) so we make some constraints that if the last user's fetching action was three days ago and Spotify API didn't release new songs so the app will return him the last prediction's result fetched previously.<br><br>
  *Note adding some constraints, in this case, aims to increase the app performance and facilitate the user experience. <br><br>
